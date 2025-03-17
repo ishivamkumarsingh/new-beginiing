@@ -12,6 +12,6 @@ Feature: Sign In
     Then I should see a "<result>" login outcome
 
     Examples:
-      | username             | password   | 
-      | zoi@gmail.com | qwerty12345@  |   
-     
+      | username             | password   | result    |
+      | zoi@gmail.com | qwerty12345@ | success   |
+      | user1@mail.com       | 2525Yash@  | fail   |

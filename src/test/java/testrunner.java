@@ -1,10 +1,9 @@
 
-
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-    features = "src/test/resources/features/SignIn.feature",
+    features = "src/test/resources/features/CourseSearch.feature",
     glue = {"stepdefinition", "utility", "pageobjects"}, 
     plugin = {
         "pretty",

@@ -11,9 +11,10 @@ import utility.ScreenshotUtil;
 import utility.BaseClass;
 import org.openqa.selenium.WebDriver;
 
-public class Hooks {
+public class Hooks extends BaseClass{
 
-    private WebDriver driver;
+    private static final WebDriver NULL = null;
+	private WebDriver driver;
 
     @Before
     public void beforeScenario(Scenario scenario) {
@@ -51,5 +52,7 @@ public class Hooks {
 
         // Flush after each scenario to update the report
         ReportGenerator.flushReport();
+        tearDown();
+        driver = NULL;
     }
 }

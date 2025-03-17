@@ -1,7 +1,7 @@
 package utility;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseClass {
 
@@ -9,12 +9,12 @@ public class BaseClass {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            // Since you already have msedgedriver.exe in the project root:
-            // (assuming "msedgedriver.exe" is at the same level as pom.xml)
-            System.setProperty("webdriver.edge.driver", 
-                System.getProperty("user.dir") + "/msedgedriver.exe");
+            // Since you already have chromedriver.exe in the project root:
+            // (assuming "chromedriver.exe" is at the same level as pom.xml)
+            System.setProperty("webdriver.chrome.driver", 
+                System.getProperty("user.dir") + "/chromedriver.exe");
 
-            driver = new EdgeDriver();
+            driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
         return driver;

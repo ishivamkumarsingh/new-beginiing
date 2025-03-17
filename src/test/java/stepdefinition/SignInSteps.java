@@ -48,10 +48,11 @@ public class SignInSteps extends BaseClass {
     }
 
     @Then("I should see a {string} login outcome")
-    public void i_should_see_a_login_outcome(String expectedOutcome) {
+    public void i_should_see_a_login_outcome(String expectedOutcome) throws InterruptedException {
         Log4jConfig.info("Verifying login outcome: " + expectedOutcome);
 
         boolean isLoggedIn = signInPage.isUserLoggedIn();
+        Thread.sleep(5000);
 
         if (expectedOutcome.equalsIgnoreCase("success")) {
             Assert.assertTrue(isLoggedIn, "Expected user to be logged in, but they are not.");

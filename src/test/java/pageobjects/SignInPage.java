@@ -18,7 +18,8 @@ public class SignInPage {
     private By passwordField = By.xpath("//*[@id=\"login-password\"]"); // adjust as needed
     private By signInButton = By.xpath("//*[@id=\"login\"]");     // adjust as needed
     private By errorMessage = By.xpath("//*[@id=\"incorrectdetails\"]"); // example for negative test
-    private By myCoursesHeader = By.xpath("//h1[contains(text(),'My Courses')]");
+    private By myCoursesHeader = By.xpath("//*[@id=\"page\"]/div[2]/div/div/div/div/div/div[1]/h1");
+    
     public SignInPage(WebDriver driver) {
         this.driver = driver;
     }
